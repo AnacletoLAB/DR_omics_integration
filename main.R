@@ -85,7 +85,6 @@ source('./utilities.R')
 # defined path to data
 dati_rinominati <- file.path('./data')
 
-
 ext_no_neighs <<- 5
 ext_seed <<- 3
 
@@ -370,7 +369,9 @@ main_best_models <- function(str_add_save = 'BestModels_', data_types = c('miRna
             
             if (length(centers)==1){ norm_quantiles = FALSE }else{ norm_quantiles = TRUE }
             
-            #res_dir = file.path('current_exp', 'data_exp', paste('June_res', str_centers,    sep = '_'))
+
+            if (!dir.exists('./results')) dir.create('./results')
+
             res_dir = file.path('./results', paste('res', str_centers, sep = '_'))
             if (!dir.exists(res_dir)) dir.create(res_dir)
             
