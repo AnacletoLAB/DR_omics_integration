@@ -5,6 +5,7 @@ each file contains the normalized omics.
 To read them the code applies the following command:
 
 >dd = readRDS('./4omics/BLCA2_norm_omics.rds')
+
 that results in a list with names
 
 >names(dd)
